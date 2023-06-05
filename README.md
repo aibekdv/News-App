@@ -1,16 +1,29 @@
-# news_app
+# News App with newsapi.org
 
-A new Flutter project.
 
-## Getting Started
+ <br/>
+ 
+ 
+### Review
 
-This project is a starting point for a Flutter application.
+<p float="left">
+  <img src="screenshots/1.png" height="500" /> 
+  <img src="screenshots/2.png" height="500" /> 
+  <img src="screenshots/3.png" height="500" /> 
+  <img src="screenshots/4.png" height="500" /> 
+</p>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Packages we are using:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+[Url Launcher :](https://pub.dev/packages/url_launcher) Flutter plugin for launching a URL. Supports web, phone, SMS, and email schemes.
+
+[Share Plus:](https://pub.dev/packages/share_plus) Flutter plugin for sharing content via the platform share UI, using the ACTION_SEND intent on Android and UIActivityViewController on iOS.
+
+[Cached Network Image:](https://pub.dev/packages/cached_network_image) Flutter library to load and cache network images. Can also be used with placeholder and error widgets.
+
+[Dio:](https://pub.dev/packages/dio) A powerful HTTP package for Dart/Flutter, which supports Global settings, Interceptors, FormData, Aborting and canceling a request, Files uploading and downloading, Requests timeout, Custom adapters, etc.
+
+intl:- [Link:](https://pub.dev/packages/intl) Contains code to deal with internationalized/localized messages, date and number formatting and parsing, bi-directional text, and other internationalization issues.
+
