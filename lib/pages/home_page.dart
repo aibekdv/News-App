@@ -11,17 +11,37 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final someNewsKeys = <String>[
-    'BBC',
-    'CNN',
-    'Apple',
-    'Google',
+  final someNewsKeys = <Map<String, dynamic>>[
+    {
+      "value": "us",
+      "title": "United States",
+    },
+    {
+      "value": "ae",
+      "title": "United Arab Emirates",
+    },
+    {
+      "value": "gb",
+      "title": "United Kingdom",
+    },
+    {
+      "value": "ru",
+      "title": "Russia",
+    },
+    {
+      "value": "in",
+      "title": "India",
+    },
+    {
+      "value": "cn",
+      "title": "China",
+    },
   ];
   NewsModel? news;
 
   Future<void> getData({String? query}) async {
     if (query != null) {
-      news = await FetchData().getAllNews(query: query);
+      news = await FetchData().getAllNews(country: query);
       setState(() {});
     } else {
       news = await FetchData().getAllNews();
@@ -45,9 +65,9 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (context) => someNewsKeys
                 .map(
                   (item) => PopupMenuItem(
-                    onTap: () => getData(query: item),
+                    onTap: () => getData(query: item['value']),
                     value: item,
-                    child: Text(item),
+                    child: Text(item['title']),
                   ),
                 )
                 .toList(),

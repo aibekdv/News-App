@@ -8,10 +8,10 @@ class FetchData {
     contentType: 'application/json',
   ));
 
-  Future<NewsModel?> getAllNews({String query = 'us'}) async {
+  Future<NewsModel?> getAllNews({String country = 'us'}) async {
     String apiKey = '93ddf10e190949448ca35614f33760d1';
     String apiLink =
-        'https://newsapi.org/v2/everything?q=$query&sortBy=popularity&apiKey=$apiKey';
+        'https://newsapi.org/v2/top-headlines?country=$country&sortBy=popularity&apiKey=$apiKey';
 
     Response res = await dio.get(apiLink);
 
